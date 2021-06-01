@@ -52,7 +52,7 @@ void Meteor::handleCollision(GameObject& otherGameObject) {
 	if (otherGameObject.hasTag("ship"))
 	{
 		GameScene& scene = (GameScene&)GAME.getCurrentScene();
-		scene.decreaseLives();
+		//scene.decreaseLives();
 		makeDead();
 		sf::Vector2f pos = sprite_.getPosition();
 		float x = pos.x;

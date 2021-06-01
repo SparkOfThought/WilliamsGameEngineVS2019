@@ -16,6 +16,10 @@ void Ship::update(sf::Time& elapsed) {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) y += SPEED * msElapsed;
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) x -= SPEED * msElapsed;
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) x += SPEED * msElapsed;
+	if (x <= 0) x = 0;
+	if (x >= 1250) x = 1250;
+	if (y <= 0) y = 0;
+	if (y >= 700)y = 700;
 	sprite_.setPosition(sf::Vector2f(x, y));
 	if (fireTimer_ > 0) 
 	{
